@@ -27,5 +27,5 @@
 #### List Projects
 ![Projects](https://github.com/DmitryGityuk/Aston_Hibernate__Test/blob/master/src/main/resources/static/images/Projects.jpg)
 
-#### Shema 
-![Shema](https://github.com/DmitryGityuk/Aston_Hibernate__Test/blob/master/src/main/resources/static/images/Shema.jpg)
+#### Schema 
+![Schema](https://github.com/DmitryGityuk/Aston_Hibernate__Test/blob/master/src/main/resources/static/images/Shema.jpg)
