@@ -18,30 +18,30 @@ public class PositionServiceImpl implements PositionService {
     @Override
     @Transactional
     public void addPosition(Position position) {
-        this.positionDao.addPosition(position);
+        positionDao.addPosition(position);
     }
 
     @Override
     @Transactional
     public void updatePosition(Position position) {
-        this.positionDao.updatePosition(position);
+        positionDao.updatePosition(position);
     }
 
     @Override
     @Transactional
     public void deletePosition(int id) {
-        this.positionDao.deletePosition(id);
+        positionDao.deletePosition(id);
     }
 
     @Override
     @Transactional
     public Position getPositionById(int id) {
-        return this.positionDao.getPositionById(id);
+        return positionDao.getPositionById(id);
     }
 
     @Override
     @Transactional
     public List<Position> listPositions() {
-        return this.positionDao.listPosition();
+        return positionDao.listPosition();
     }
 }
