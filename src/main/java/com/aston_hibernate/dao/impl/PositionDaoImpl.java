@@ -17,19 +17,19 @@ public class PositionDaoImpl implements PositionDao {
 
     @Override
     public void addPosition(Position position) {
-        Session session = this.sessionFactory.getCurrentSession();
+        Session session = sessionFactory.getCurrentSession();
         session.persist(position);
     }
 
     @Override
     public void updatePosition(Position position) {
-        Session session = this.sessionFactory.getCurrentSession();
+        Session session = sessionFactory.getCurrentSession();
         session.update(position);
     }
 
     @Override
     public void deletePosition(int id) {
-        Session session = this.sessionFactory.getCurrentSession();
+        Session session = sessionFactory.getCurrentSession();
         Position position = session.load(Position.class, new Integer(id));
         if (position != null) {
             session.delete(position);
@@ -38,14 +38,14 @@ public class PositionDaoImpl implements PositionDao {
 
     @Override
     public Position getPositionById(int id) {
-        Session session = this.sessionFactory.getCurrentSession();
+        Session session = sessionFactory.getCurrentSession();
         Position position = session.load(Position.class, new Integer(id));
         return position;
     }
 
     @Override
     public List<Position> listPosition() {
-        Session session = this.sessionFactory.getCurrentSession();
+        Session session = sessionFactory.getCurrentSession();
         List<Position> positions = session.createQuery("from Position").list();
         return positions;
     }

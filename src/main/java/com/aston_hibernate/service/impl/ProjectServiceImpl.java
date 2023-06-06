@@ -18,31 +18,31 @@ public class ProjectServiceImpl implements ProjectService {
     @Override
     @Transactional
     public void addProject(Project project) {
-        this.projectDao.addProject(project);
+        projectDao.addProject(project);
     }
 
     @Override
     @Transactional
     public void updateProject(Project project) {
-        this.projectDao.updateProject(project);
+        projectDao.updateProject(project);
     }
 
     @Override
     @Transactional
     public void deleteProject(int id) {
-        this.projectDao.deleteProject(id);
+        projectDao.deleteProject(id);
     }
 
     @Override
     @Transactional
     public Project getProjectById(int id) {
-        return this.projectDao.getProjectById(id);
+        return projectDao.getProjectById(id);
     }
 
     @Override
     @Transactional
     public List<Project> listProjects() {
-        return this.projectDao.listProjects();
+        return projectDao.listProjects();
     }
 }
 

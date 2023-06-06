@@ -17,19 +17,19 @@ public class ProjectDaoImpl implements ProjectDao {
 
     @Override
     public void addProject(Project project) {
-        Session session = this.sessionFactory.getCurrentSession();
+        Session session = sessionFactory.getCurrentSession();
         session.persist(project);
     }
 
     @Override
     public void updateProject(Project project) {
-        Session session = this.sessionFactory.getCurrentSession();
+        Session session = sessionFactory.getCurrentSession();
         session.update(project);
     }
 
     @Override
     public void deleteProject(int id) {
-        Session session = this.sessionFactory.getCurrentSession();
+        Session session = sessionFactory.getCurrentSession();
         Project project = session.load(Project.class, new Integer(id));
         if (project != null) {
             session.delete(project);
@@ -38,14 +38,14 @@ public class ProjectDaoImpl implements ProjectDao {
 
     @Override
     public Project getProjectById(int id) {
-        Session session = this.sessionFactory.getCurrentSession();
+        Session session = sessionFactory.getCurrentSession();
         Project project = session.load(Project.class, new Integer(id));
         return project;
     }
 
     @Override
     public List<Project> listProjects() {
-        Session session = this.sessionFactory.getCurrentSession();
+        Session session = sessionFactory.getCurrentSession();
         List<Project> projects = session.createQuery("from Project").list();
         return projects;
     }
